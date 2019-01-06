@@ -1,0 +1,18 @@
+import threading
+import time
+
+def thread_job():
+    print('This is an added Thread, number is %s' % threading.current_thread())
+    time.sleep(1)
+
+def main():
+    for i in range(100):
+        added_thread = threading.Thread(target=thread_job)
+        added_thread.start()
+    # print(threading.active_count())
+    # print(threading.enumerate())
+    # print(threading.current_thread())
+
+
+if __name__ == '__main__':
+    main()
