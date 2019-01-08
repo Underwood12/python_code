@@ -13,12 +13,18 @@ def T2_job():
 
 def main():
     added_thread = threading.Thread(target=thread_job, name='T1')
+    print('11111111111:')
     thread2 = threading.Thread(target=T2_job, name='T2')
+    print('2222222222:')
     added_thread.start()
+    print('333333333333:')
+    time.sleep(20)
     thread2.start()
-    added_thread.join()
-    thread2.join()
+    print('444444444444444:')
+    # added_thread.join()
+    # thread2.join()
     print('all done\n')
+    print('55555555555555555')
 
 
 if __name__ == '__main__':
